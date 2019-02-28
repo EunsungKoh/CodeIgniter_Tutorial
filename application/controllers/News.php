@@ -53,4 +53,22 @@ class News extends CI_Controller {
             $this->load->view('news/success');
         }
     }
+    public function test_get()
+    {
+        $this->output->set_header('HTTP/1.0 200 OK');
+        $this->output
+        ->set_content_type('application/json')
+        ->set_output(json_encode(array('foo' => 'bar')));
+    }
+    public function test_post($value)
+    {
+        $response = array(
+            "foo" => $value,
+        );
+        $this->output->set_header('HTTP/1.0 200 OK');
+        $this->output
+        ->set_content_type('application/json')
+        ->set_output(json_encode($response,TRUE));
+
+    }
 }
