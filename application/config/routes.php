@@ -54,5 +54,4 @@ $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
 $route['test']['GET'] = 'news/test_get';
 $route['test']['POST'] = 'news/test_post';
-$route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'news';
